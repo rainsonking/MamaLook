@@ -19,7 +19,7 @@ import java.util.List;
 
 import cn.bmob.v3.exception.BmobException;
 import razerdp.friendcircle.R;
-import razerdp.friendcircle.app.bmob.BmobInitHelper;
+import razerdp.friendcircle.activity.publish.PublishActivity;
 import razerdp.friendcircle.app.manager.LocalHostManager;
 import razerdp.friendcircle.app.manager.UpdateInfoManager;
 import razerdp.friendcircle.app.mvp.model.entity.CommentInfo;
@@ -31,10 +31,7 @@ import razerdp.friendcircle.app.mvp.view.IMomentView;
 import razerdp.friendcircle.app.net.request.MomentsRequest;
 import razerdp.friendcircle.app.net.request.SimpleResponseListener;
 import razerdp.friendcircle.config.MomentsType;
-import razerdp.github.com.baselibrary.helper.AppSetting;
 import razerdp.friendcircle.ui.adapter.CircleMomentsAdapter;
-import razerdp.friendcircle.activity.publish.PublishActivity;
-import razerdp.github.com.baselibrary.utils.ui.UIHelper;
 import razerdp.friendcircle.ui.viewholder.EmptyMomentsVH;
 import razerdp.friendcircle.ui.viewholder.MultiImageMomentsVH;
 import razerdp.friendcircle.ui.viewholder.TextOnlyMomentsVH;
@@ -43,14 +40,16 @@ import razerdp.friendcircle.ui.widget.commentwidget.CommentBox;
 import razerdp.friendcircle.ui.widget.commentwidget.CommentWidget;
 import razerdp.friendcircle.ui.widget.popup.RegisterPopup;
 import razerdp.friendcircle.ui.widget.popup.SelectPhotoMenuPopup;
+import razerdp.github.com.baselibrary.helper.AppSetting;
+import razerdp.github.com.baselibrary.imageloader.ImageLoadMnanger;
 import razerdp.github.com.baselibrary.manager.KeyboardControlMnanager;
 import razerdp.github.com.baselibrary.utils.ToolUtil;
+import razerdp.github.com.baselibrary.utils.ui.UIHelper;
 import razerdp.github.com.baseuilib.base.BaseTitleBarActivity;
 import razerdp.github.com.baseuilib.widget.common.TitleBar;
 import razerdp.github.com.baseuilib.widget.pullrecyclerview.CircleRecyclerView;
 import razerdp.github.com.baseuilib.widget.pullrecyclerview.CircleRecyclerView.OnPreDispatchTouchListener;
 import razerdp.github.com.baseuilib.widget.pullrecyclerview.interfaces.OnRefreshListener2;
-import razerdp.github.com.baselibrary.imageloader.ImageLoadMnanger;
 
 /**
  * Created by 大灯泡 on 2016/10/26.
@@ -93,10 +92,10 @@ public class FriendCircleDemoActivity extends BaseTitleBarActivity implements On
 
 
     private void initView() {
-        setTitle("朋友圈");
+        setTitle("班级圈");
         setTitleMode(TitleBar.MODE_BOTH);
         setTitleRightIcon(R.drawable.ic_camera);
-        setTitleLeftText("发现");
+        setTitleLeftText("洛信");
         setTitleLeftIcon(R.drawable.back_left);
         presenter = new MomentPresenter(this);
 
@@ -182,12 +181,12 @@ public class FriendCircleDemoActivity extends BaseTitleBarActivity implements On
 
     @Override
     public void onTitleLeftClick() {
-        if (System.currentTimeMillis() - lastClickBackTime > 2000) { // 后退阻断
-            UIHelper.ToastMessage("这是朋友圈工程哦，不是整个微信哦~再点一次退出");
-            lastClickBackTime = System.currentTimeMillis();
-        } else { // 关掉app
+//        if (System.currentTimeMillis() - lastClickBackTime > 2000) { // 后退阻断
+//            UIHelper.ToastMessage("这是朋友圈工程哦，不是整个微信哦~再点一次退出");
+//            lastClickBackTime = System.currentTimeMillis();
+//        } else { // 关掉app
             super.onBackPressed();
-        }
+//        }
     }
 
     @Override
@@ -384,21 +383,22 @@ public class FriendCircleDemoActivity extends BaseTitleBarActivity implements On
                 }
             });
             registerPopup.showPopupWindow();
-        }else {
-            UpdateInfoManager.INSTANCE.showUpdateInfo();
         }
+//        else {
+//            UpdateInfoManager.INSTANCE.showUpdateInfo();
+//        }
     }
 
     private long lastClickBackTime;
 
     @Override
     public void onBackPressed() {
-        if (System.currentTimeMillis() - lastClickBackTime > 2000) { // 后退阻断
-            UIHelper.ToastMessage("再点一次退出");
-            lastClickBackTime = System.currentTimeMillis();
-        } else { // 关掉app
+//        if (System.currentTimeMillis() - lastClickBackTime > 2000) { // 后退阻断
+//            UIHelper.ToastMessage("再点一次退出");
+//            lastClickBackTime = System.currentTimeMillis();
+//        } else { // 关掉app
             super.onBackPressed();
-        }
+//        }
     }
 
     //=============================================================call back

@@ -1,9 +1,10 @@
 package razerdp.friendcircle.app;
 
+import android.app.Activity;
 import android.app.Application;
-import android.content.Context;
 
-import com.alibaba.android.arouter.launcher.ARouter;
+import java.util.LinkedList;
+import java.util.List;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobConfig;
@@ -12,7 +13,6 @@ import razerdp.friendcircle.config.Define;
 import razerdp.github.com.baselibrary.base.AppContext;
 import razerdp.github.com.baselibrary.helper.AppFileHelper;
 import razerdp.github.com.baselibrary.helper.AppSetting;
-import razerdp.github.com.baselibrary.manager.ThreadPoolManager;
 import razerdp.github.com.baselibrary.manager.localphoto.LocalPhotoManager;
 
 /**
@@ -50,8 +50,31 @@ public class FriendCircleApp extends Application {
         Bmob.initialize(config);
     }
 
+
+
+
+    private List<Activity> activityList = new LinkedList<>();
+    private static FriendCircleApp instance;
     private void initLocalHostInfo() {
         LocalHostManager.INSTANCE.init();
     }
+    //单例设计模式中取得唯一的MyApplication实例
+    public static FriendCircleApp getInstance(){
+        if(instance == null)
+            instance = new FriendCircleApp();
+        return instance;
+    }
 
+    //添加activity到容器中
+    public void addActivity(Activity activity){
+        activityList.add(activity);
+    }
+    //遍历所有的activity并finish
+    public void exitApp(){
+        for(Activity activity : activityList){
+            if(activity != null)
+                activity.finish();
+        }
+        System.exit(0);
+    }
 }

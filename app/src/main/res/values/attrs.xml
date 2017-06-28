@@ -93,4 +93,14 @@
         <attr name="stroke_width" format="dimension"/>
         <attr name="current_progress" format="integer"/>
     </declare-styleable>
+
+
+
+    <declare-styleable name="CnToolbar">
+
+        <attr name="rightButtonIcon" format="reference" />
+        <attr name="isOnShowRightButton" format="reference" />
+        <attr name="leftButtonIcon" format="reference" />
+
+    </declare-styleable>
 </resources>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  <!--Toolbar-->
+  <kehuhuaPage.widgts.CnToolbar
+      android:id="@+id/stu_toolbar"
+      android:layout_width="fill_parent"
+      android:layout_height="45dp"
+      android:background="@color/red">
+  </kehuhuaPage.widgts.CnToolbar>
+  <LinearLayout
+      android:id="@+id/layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black" />
+
+    <!--班级圈-->
+    <LinearLayout
+        android:id="@+id/stu_class_circle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:orientation="vertical">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="50sp">
+
+        <ImageView
+            android:id="@+id/stu_info_image"
+            android:layout_width="23dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bmob_update_btn_check_off_holo_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12sp"
+            android:layout_toRightOf="@+id/stu_info_image"
+            android:text="班级圈"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10sp"
+            android:src="@drawable/arrow" />
+
+      </RelativeLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="@color/black" />
+
+
+    </LinearLayout>
+
+    <!--联系老师-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:orientation="vertical">
+
+      <RelativeLayout
+          android:id="@+id/stu_resetPwd"
+          android:layout_width="match_parent"
+          android:layout_height="50sp">
+
+        <ImageView
+            android:id="@+id/stu_passWord_image"
+            android:layout_width="23dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bmob_update_btn_check_off_holo_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12sp"
+            android:layout_toRightOf="@+id/stu_passWord_image"
+            android:text="联系老师"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10sp"
+            android:src="@drawable/arrow" />
+
+      </RelativeLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="@color/black" />
+
+
+    </LinearLayout>
+    <!--校长信箱-->
+    <LinearLayout
+        android:id="@+id/ll_stu_feedback1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:orientation="vertical">
+
+      <RelativeLayout
+          android:id="@+id/rl_feedback1"
+          android:layout_width="match_parent"
+          android:layout_height="50sp">
+
+        <ImageView
+            android:id="@+id/stu_suggest_image1"
+            android:layout_width="23dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bmob_update_btn_check_off_holo_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12sp"
+            android:layout_toRightOf="@+id/stu_suggest_image1"
+            android:text="校长信箱"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="10sp"
+            android:src="@drawable/arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+      </RelativeLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="@color/black" />
+
+
+    </LinearLayout>
+    <!--活动通知-->
+    <LinearLayout
+        android:id="@+id/ll_stu_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:orientation="vertical">
+
+      <RelativeLayout
+          android:id="@+id/rl_feedback"
+          android:layout_width="match_parent"
+          android:layout_height="50sp">
+
+        <ImageView
+            android:id="@+id/stu_suggest_image"
+            android:layout_width="23dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bmob_update_btn_check_off_holo_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12sp"
+            android:layout_toRightOf="@+id/stu_suggest_image"
+            android:text="活动通知"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="10sp"
+            android:src="@drawable/arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+      </RelativeLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="@color/black" />
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+</LinearLayout>
