@@ -56,7 +56,6 @@ public class StuMainActivity extends BaseActivity implements View.OnClickListene
         Fragment meFragment = new MeFragment();
         List<Fragment> mFragments = new ArrayList<>();
         mFragments.add(homePageFragment);
-//        mFragments.add(menuFragment);
         mFragments.add(studyFragment);
         mFragments.add(lookSoonFragment);
         mFragments.add(meFragment);

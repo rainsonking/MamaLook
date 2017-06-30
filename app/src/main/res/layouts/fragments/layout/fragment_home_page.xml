@@ -9,6 +9,27 @@
       android:layout_height="45dp"
       android:background="@color/red">
   </kehuhuaPage.widgts.CnToolbar>
+
+  <com.recker.flybanner.FlyBanner
+      android:id="@+id/banner_home_page"
+      android:layout_width="match_parent"
+      android:layout_height="200dp" />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical">
+    <kehuhuaPage.widgts.ScrollText
+        android:id="@+id/text_scroll_home_page"
+        android:layout_width="match_parent"
+        android:background="@color/text_gray"
+        android:layout_height="wrap_content"
+        />
+
+
+
+  </RelativeLayout>
+
   <TextView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
