@@ -18,6 +18,7 @@ import razerdp.friendcircle.R;
 
 public class HomePageFragment extends Fragment implements View.OnClickListener {
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
