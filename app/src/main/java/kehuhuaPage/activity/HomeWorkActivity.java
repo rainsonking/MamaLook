@@ -72,6 +72,8 @@ public class HomeWorkActivity extends BaseActivity  implements View.OnClickListe
                 requestSet();
             }
         });
+
+
     }
 
     @Override
