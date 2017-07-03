@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import kehuhuaPage.activity.CourseworkProActivity;
+import kehuhuaPage.activity.HomeWorkActivity;
 import kehuhuaPage.coursecard.CourseCardActivity;
 import kehuhuaPage.widgts.CnToolbar;
 import razerdp.friendcircle.R;
@@ -42,7 +42,7 @@ public class StudyFragment extends Fragment implements View.OnClickListener {
         tvCoursewrokpro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CourseworkProActivity.class);
+                Intent intent = new Intent(getActivity(), HomeWorkActivity.class);
                 startActivity(intent);
             }
         });

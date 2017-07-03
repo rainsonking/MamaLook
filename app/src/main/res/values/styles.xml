@@ -75,4 +75,12 @@
         <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
         <item name="android:progressDrawable">@drawable/study_frg_progressbar</item>
     </style>
+
+
+
+
+    <style name="PTPopupWindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/pt_push_in</item>
+        <item name="android:windowExitAnimation">@anim/pt_push_out</item>
+    </style>
 </resources>
