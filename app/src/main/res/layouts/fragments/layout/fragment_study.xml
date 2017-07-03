@@ -8,20 +8,51 @@
         android:id="@+id/stu_toolbar"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        android:background="@color/red"></kehuhuaPage.widgts.CnToolbar>
+        android:background="@color/red"/>
 
-    <TextView
-        android:id="@+id/tv_coursewrokpro"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:gravity="center"
-        android:text="我的作业" />
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/c_33ccff"/>
 
-    <TextView
-        android:id="@+id/tv_course"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:text="课程表" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="50dp"
+        android:background="#FF8C00"
+        >
+
+        <TextView
+            android:id="@+id/tv_coursewrokpro"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="我的作业" />
+
+        <TextView
+            android:id="@+id/tv_study_log"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+         android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:text="学习记录" />
+
+
+        <TextView
+            android:id="@+id/tv_course"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:background="@color/white"
+            android:text="课程表" />
+
+
+
+
+    </RelativeLayout>
+
+
 </LinearLayout>
