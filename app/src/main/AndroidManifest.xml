@@ -52,7 +52,7 @@
             android:theme="@style/AppTheme"/>
 
         <activity
-            android:name="kehuhuaPage.activity.CourseworkProActivity"
+            android:name="kehuhuaPage.activity.HomeWorkActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
