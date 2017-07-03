@@ -57,6 +57,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
 
+
+        <activity
+            android:name="kehuhuaPage.activity.StudyLogActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
         <!--glide-->
         <meta-data
             android:name="razerdp.github.com.baselibrary.imageloader.glide.GlobalGlideConfiguration"

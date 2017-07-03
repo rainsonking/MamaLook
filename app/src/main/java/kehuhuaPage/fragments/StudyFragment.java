@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import kehuhuaPage.activity.HomeWorkActivity;
+import kehuhuaPage.activity.StudyLogActivity;
 import kehuhuaPage.coursecard.CourseCardActivity;
 import kehuhuaPage.widgts.CnToolbar;
 import razerdp.friendcircle.R;
@@ -21,7 +22,7 @@ import razerdp.friendcircle.R;
  */
 
 public class StudyFragment extends Fragment implements View.OnClickListener {
-    private TextView tvCourse, tvCoursewrokpro;
+    private TextView tvCourse, tvCoursewrokpro,tvStudyLog;
 
     @Nullable
     @Override
@@ -33,6 +34,7 @@ public class StudyFragment extends Fragment implements View.OnClickListener {
 //        saveImageToGallery(getActivity(), image);
         tvCoursewrokpro = (TextView) view.findViewById(R.id.tv_coursewrokpro);
         tvCourse = (TextView) view.findViewById(R.id.tv_course);
+        tvStudyLog = (TextView) view.findViewById(R.id.tv_study_log);
         tvCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +49,13 @@ public class StudyFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent);
             }
         });
-
+        tvStudyLog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), StudyLogActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
