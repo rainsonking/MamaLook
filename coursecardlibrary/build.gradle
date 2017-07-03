@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release' // must be applied after your artifact generating plugin (eg. java / com.android.library)
+
+buildscript {
+    repositories {
+        jcenter {
+            url "http://jcenter.bintray.com/"
+        }
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.3.4'
+    }
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+
+        versionCode 23
+        versionName "0.2.3"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    provided 'com.android.support:appcompat-v7:25.3.1'
+    provided 'com.android.support:recyclerview-v7:25.3.1'
+}
+
+publish {
+    userOrg = 'tubb'
+    groupId = 'com.tubb.calendarselector.library'
+    artifactId = 'calendar-selector'
+    publishVersion = '0.2.3'
+    desc = 'A calender selector'
+    website = 'https://github.com/TUBB/CalendarSelector'
+}

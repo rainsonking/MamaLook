@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MonthView">
+        <!-- only draw the month day, or not, default is false -->
+        <attr name="sc_draw_monthday_only" format="boolean"/>
+        <!-- start day of a week, we support (sunday、monday and saturday) -->
+        <attr name="sc_firstday_week" format="enum">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="saturday" value="7"/>
+        </attr>
+        <attr name="sc_should_reset_decor" format="boolean"/>
+
+        <!-- editor mode only -->
+        <!-- test selected days (format:1,2,3,4) -->
+        <attr name="sc_selected_days" format="string"/>
+        <!-- test month (format:2016-3) -->
+        <attr name="sc_month" format="string"/>
+
+        <attr name="sc_attend_days" format="string"/>
+        <attr name="sc_no_attend_days" format="string"/>
+        <attr name="sc_leave_days" format="string"/>
+    </declare-styleable>
+</resources>

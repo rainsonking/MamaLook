@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:id="@+id/ll_day"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/coursecard_tv_bg_date1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+
+            android:gravity="center"
+            android:textColor="@color/color_dayview_text_selector"
+            android:textSize="@dimen/t_16"
+            tools:text="30" />
+        <!--android:background="@drawable/shape_dayview_text_bg_selected"-->
+        <!--android:background="@drawable/drawable_dayview_text_bg"-->
+    </LinearLayout>
+</FrameLayout>
