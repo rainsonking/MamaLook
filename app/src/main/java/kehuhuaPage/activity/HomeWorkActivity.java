@@ -21,16 +21,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import kehuhuaPage.adpter.HomeWorkBaseAdapter;
 import kehuhuaPage.widgts.ListViews;
 import kehuhuaPage.widgts.VpSwipeRefreshLayout;
 import razerdp.friendcircle.R;
 
 /**
  * Created by Administrator on 2017/7/3 0003.
- *
  */
 
-public class HomeWorkActivity extends BaseActivity  implements View.OnClickListener {
+public class HomeWorkActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = "HomeWorkActivity";
     private PopupWindow stageNameWindow;//下拉pop
     private ListViews lvHomework;//电池列表
@@ -40,6 +40,8 @@ public class HomeWorkActivity extends BaseActivity  implements View.OnClickListe
     private String[] stageNames;//LEVEL数组
     private List<Map<String, Object>> dataList = new ArrayList<>();//下拉按钮数据存放
     private VpSwipeRefreshLayout pull_refresh_scrollview;
+    private HomeWorkBaseAdapter adpter;
+    private List<Map<String, Object>> mList = new ArrayList<>();
 
 
     @Override
@@ -48,6 +50,20 @@ public class HomeWorkActivity extends BaseActivity  implements View.OnClickListe
         setContentView(R.layout.activity_homework);
         initView();
         requestSet();
+
+        initData();
+    }
+
+    private void initData() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("unit", "Unit1");
+        mList.add(map);
+        map = new HashMap<>();
+        map.put("unit", "Unit2");
+        mList.add(map);
+
+        adpter = new HomeWorkBaseAdapter(this, mList);
+        lvHomework.setAdapter(adpter);
     }
 
     @Override
@@ -153,18 +169,17 @@ public class HomeWorkActivity extends BaseActivity  implements View.OnClickListe
     }
 
 
-
     public void requestSet() {
 
-        List<Map<String, Object>> aa=new ArrayList<>();
-        Map<String, Object> aaMap1=new HashMap<>();
-        aaMap1.put("PT_NAME","LEVEL 1");
+        List<Map<String, Object>> aa = new ArrayList<>();
+        Map<String, Object> aaMap1 = new HashMap<>();
+        aaMap1.put("PT_NAME", "LEVEL 1");
 
-        Map<String, Object> aaMap2=new HashMap<>();
-        aaMap2.put("PT_NAME","LEVEL 2");
+        Map<String, Object> aaMap2 = new HashMap<>();
+        aaMap2.put("PT_NAME", "LEVEL 2");
 
-        Map<String, Object> aaMap3=new HashMap<>();
-        aaMap3.put("PT_NAME","LEVEL 3");
+        Map<String, Object> aaMap3 = new HashMap<>();
+        aaMap3.put("PT_NAME", "LEVEL 3");
         aa.add(aaMap1);
         aa.add(aaMap2);
         aa.add(aaMap3);

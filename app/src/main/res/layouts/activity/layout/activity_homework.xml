@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <RelativeLayout
         android:id="@+id/pt_head"
         android:layout_width="match_parent"
@@ -15,9 +16,9 @@
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:paddingStart="12dp"
+            android:orientation="horizontal"
             android:paddingEnd="12dp"
-            android:orientation="horizontal">
+            android:paddingStart="12dp">
 
             <ImageView
                 android:id="@+id/iv_back"
@@ -26,7 +27,7 @@
                 android:layout_marginStart="10dp"
                 android:scaleX="0.8"
                 android:scaleY="0.8"
-                android:src="@mipmap/iv_back_2"/>
+                android:src="@mipmap/iv_back_2" />
         </LinearLayout>
 
         <LinearLayout
@@ -41,25 +42,25 @@
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textColor="@color/white"
                 android:gravity="center_vertical"
-                android:textSize="22sp"/>
+                android:textColor="@color/white"
+                android:textSize="22sp" />
 
             <ImageView
                 android:id="@+id/iv_on_off"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleX="0.8"
-                android:scaleY="0.8"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="5dp"/>
+                android:layout_marginStart="5dp"
+                android:scaleX="0.8"
+                android:scaleY="0.8" />
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignParentBottom="true"
-            android:background="#c8c7cc"/>
+            android:background="#c8c7cc" />
     </RelativeLayout>
 
     <kehuhuaPage.widgts.VpSwipeRefreshLayout
@@ -68,22 +69,30 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-        <kehuhuaPage.widgts.ListViews
-            android:id="@+id/lv_homework"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/activity_homework_item">
+            android:background="@color/c_ffffff"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
-        </kehuhuaPage.widgts.ListViews>
-        </LinearLayout>
-    </ScrollView>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <kehuhuaPage.widgts.ListViews
+                    android:id="@+id/lv_homework"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dividerHeight="30px"
+                    android:divider="@color/c_ffffff"
+                    tools:listitem="@layout/activity_homework_item">
+
+                </kehuhuaPage.widgts.ListViews>
+            </LinearLayout>
+        </ScrollView>
     </kehuhuaPage.widgts.VpSwipeRefreshLayout>
 </LinearLayout>
