@@ -1,5 +1,6 @@
 package kehuhuaPage.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -64,6 +65,13 @@ public class HomeWorkActivity extends BaseActivity implements View.OnClickListen
 
         adpter = new HomeWorkBaseAdapter(this, mList);
         lvHomework.setAdapter(adpter);
+        lvHomework.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(HomeWorkActivity.this,HomeWorkDelActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -8,35 +8,34 @@
         android:id="@+id/stu_toolbar"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
-        android:background="@color/red"/>
+        android:background="@color/red" />
 
     <WebView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/c_33ccff"/>
+        android:background="@color/c_33ccff" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="50dp"
         android:background="#FF8C00"
-        >
+        android:paddingTop="50dp">
 
         <TextView
             android:id="@+id/tv_coursewrokpro"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:gravity="center"
             android:background="@color/white"
+            android:gravity="center"
             android:text="我的作业" />
 
         <TextView
             android:id="@+id/tv_study_log"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:gravity="center"
-         android:layout_centerInParent="true"
+            android:layout_centerInParent="true"
             android:background="@color/white"
+            android:gravity="center"
             android:text="学习记录" />
 
 
@@ -44,12 +43,10 @@
             android:id="@+id/tv_course"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:gravity="center"
             android:layout_alignParentEnd="true"
             android:background="@color/white"
+            android:gravity="center"
             android:text="课程表" />
-
-
 
 
     </RelativeLayout>

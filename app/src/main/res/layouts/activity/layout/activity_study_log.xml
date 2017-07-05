@@ -66,15 +66,64 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-        <kehuhuaPage.widgts.ListViews
-            android:id="@+id/lv_homework"
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/activity_homework_item">
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        </kehuhuaPage.widgts.ListViews>
+                <View
+                    android:id="@+id/view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@mipmap/img_stage_name_icon_a" />
+
+                <View
+                    android:id="@+id/view_2"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:background="@color/orangered" />
+                <kehuhuaPage.widgts.ListViews
+                    android:id="@+id/lv_listview"
+                    android:layout_below="@+id/view_2"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="match_parent"
+                    android:divider="#00000000"
+                    android:dividerHeight="0dip"
+                    tools:listitem="@layout/activity_study_log_listitem">
+
+                </kehuhuaPage.widgts.ListViews>
+                <LinearLayout
+                    android:layout_below="@+id/lv_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/orangered"
+                        android:padding="3dp"
+                        android:text="敬请期待"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:background="@drawable/study_log_dotted_line_rotate"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="-10dp"
+                        android:layout_marginRight="-10dp"
+                        android:layerType="software"
+                        android:layout_width="match_parent" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
         </LinearLayout>
     </ScrollView>
     </kehuhuaPage.widgts.VpSwipeRefreshLayout>
