@@ -74,4 +74,7 @@ dependencies {
 
     compile project(path: ':lookbanner')
     compile project(path: ':coursecardlibrary')
+
+    compile 'com.facebook.fresco:fresco:0.14.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
 }
