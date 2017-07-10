@@ -562,9 +562,9 @@ public class ChatGoActivity extends BaseActivity implements OnClickListener {
     private String title = "";//即为会话名称
 
     public void getSessionPragramData() {
-        dataId = getIntent().getStringExtra("dataId");
-        title = getIntent().getStringExtra("channelName");
-        chat_title.setText(title);
+//        dataId = getIntent().getStringExtra("dataId");
+//        title = getIntent().getStringExtra("channelName");
+//        chat_title.setText(title);
         Log.e(TAG, "getSessionPragramData: 聊天界面收到的dataId " + dataId);
         Log.e(TAG, "getSessionPragramData: 聊天界面收到的title " + title);
 //        MyPreferenceManager.commitString(StuPra.PREF_CURRENT_CHATTING, dataId);

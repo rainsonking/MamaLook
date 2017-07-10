@@ -39,7 +39,7 @@ import razerdp.friendcircle.R;
 
 public class ContTeacherActivity extends BaseActivity {
     private RecyclerView mRecyclerView;
-   private SwipeRefreshLayout mSwipeRefreshLayout;
+    private SwipeRefreshLayout mSwipeRefreshLayout;
     private int totalNum = 0;
     private int start = 0;
     private final int limit = 200;
@@ -74,20 +74,29 @@ public class ContTeacherActivity extends BaseActivity {
         setContentView(R.layout.activity_cont_teacher);
         initView();
 //        dialog.show();
-        initView();
+
         initRefreshLayout();
         IntentFilter filter = new IntentFilter(MyReceiver.actionRefreshSessionList);
         registerReceiver(broadcastReceiver, filter);
         IntentFilter filterChatGo = new IntentFilter(ChatGoActivity.actionRefreshSessionListChatGo);
         registerReceiver(broadcastReceiverChatGo, filterChatGo);
         requestData();
+
+//        Map<String, Object> map = new HashMap<>();
+//        map.put("title","哈哈哈");
+//        map.put("psnname","哈哈哈哈哈哈哈哈哈哈哈哈");
+//        map.put("time","12:05");
+//        datas.add(map);
+//        adapter = new ListBaseAdapter(datas, this);
+//        mRecyclerView.setAdapter(adapter);
+        normalRequest();
     }
 
     @Override
     public void initView() {
         mToolbar = (CnToolbar) findViewById(R.id.stu_toolbar);
         mToolbar.setTitle("聊天");
-        mRecyclerView= (RecyclerView) findViewById(R.id.lv);
+        mRecyclerView = (RecyclerView) findViewById(R.id.lv);
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this,
                 DividerItemDecoration.VERTICAL));
 //        mRecyclerView.addItemDecoration(new RecyclerViewDivider(
@@ -131,6 +140,7 @@ public class ContTeacherActivity extends BaseActivity {
     }
 
     private static final String TAG = "ContTeacherActivity";
+
     /**
      * 分动作展示数据
      */
@@ -251,8 +261,14 @@ public class ContTeacherActivity extends BaseActivity {
     private boolean mIsRefreshing = false;
 
     private void normalRequest() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("title","哈哈哈");
+        map.put("psnname","哈哈哈哈哈哈哈哈哈哈哈哈");
+        map.put("time","12:05");
+        datas.add(map);
         adapter = new ListBaseAdapter(datas, this);
         mRecyclerView.setAdapter(adapter);
+
         final CustomLinearLayoutManager customLinearLayoutManager;
         customLinearLayoutManager = new CustomLinearLayoutManager(this);
         mRecyclerView.setLayoutManager(customLinearLayoutManager);
@@ -302,12 +318,12 @@ public class ContTeacherActivity extends BaseActivity {
 //        Log.e(TAG, "onItemClick: CHANNELID" + menuMap.get("CHANNELID").toString());
 //        Log.e(TAG, "onItemClick: CHANNELNAME" + menuMap.get("CHANNELNAME").toString());
         Intent intent = new Intent(this, ChatGoActivity.class);
-        intent.putExtra("dataId", String.valueOf(menuMap.get("CHANNELID")));
+//        intent.putExtra("dataId", String.valueOf(menuMap.get("CHANNELID")));
 //        String channelName = String.valueOf(menuMap.get(customChannelName));
 //        String defaultName = String.valueOf(menuMap.get(defaultChannelName));
 //        intent.putExtra("channelName", channelName.equals("null") ? defaultName : channelName);
-        Log.e(TAG, "toItem: CHANNELID " + String.valueOf(menuMap.get("CHANNELID")));
-        Log.e(TAG, "toItem: CHANNELNAME " + String.valueOf(menuMap.get("CHANNELNAME")));
+//        Log.e(TAG, "toItem: CHANNELID " + String.valueOf(menuMap.get("CHANNELID")));
+//        Log.e(TAG, "toItem: CHANNELNAME " + String.valueOf(menuMap.get("CHANNELNAME")));
         startActivity(intent);
     }
 
@@ -359,5 +375,5 @@ public class ContTeacherActivity extends BaseActivity {
         }
     }
 
-    
+
 }

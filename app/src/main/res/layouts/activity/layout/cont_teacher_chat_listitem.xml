@@ -9,14 +9,14 @@
     android:paddingEnd="12dp"
     android:paddingStart="13dp">
 
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/group_image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        fresco:failureImage="@mipmap/ic_launcher"
-        fresco:pressedStateOverlayImage="@android:color/transparent"
-        fresco:progressBarAutoRotateInterval="5000"
-        fresco:roundAsCircle="true" />
+    <!--<com.facebook.drawee.view.SimpleDraweeView-->
+        <!--android:id="@+id/group_image"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--fresco:failureImage="@mipmap/ic_launcher"-->
+        <!--fresco:pressedStateOverlayImage="@android:color/transparent"-->
+        <!--fresco:progressBarAutoRotateInterval="5000"-->
+        <!--fresco:roundAsCircle="true" />-->
     <!--<ImageView-->
     <!--android:layout_width="40dp"-->
     <!--android:layout_height="40dp"-->

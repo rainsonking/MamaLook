@@ -86,29 +86,29 @@ public class ListBaseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 //                }
 //
 //            }
-            Log.e(TAG, "onBindViewHolder: unreadNum " + unreadNum);
-            //消息数为0时隐藏角标
-            if (unreadNum == 0) {
-                holder.tv_psn_msg.setVisibility(View.GONE);
-            } else {
-                holder.tv_psn_msg.setVisibility(View.VISIBLE);
-            }
-            BadgeView badgeView1 = new com.jauker.widget.BadgeView(mContext);
-            badgeView1.setTargetView(holder.tv_psn_msg);
-            badgeView1.setBadgeCount(unreadNum);
+//            Log.e(TAG, "onBindViewHolder: unreadNum " + unreadNum);
+//            //消息数为0时隐藏角标
+//            if (unreadNum == 0) {
+//                holder.tv_psn_msg.setVisibility(View.GONE);
+//            } else {
+//                holder.tv_psn_msg.setVisibility(View.VISIBLE);
+//            }
+//            BadgeView badgeView1 = new com.jauker.widget.BadgeView(mContext);
+//            badgeView1.setTargetView(holder.tv_psn_msg);
+//            badgeView1.setBadgeCount(unreadNum);
 
 
 //会话对象名称
 //            String channelName = String.valueOf(map.get(customChannelName));
 //            String defaultName = String.valueOf(map.get(defaultChannelName));
 //            holder.tv_title.setText(!channelName.equals("null") ? channelName : defaultName);
-            Uri uri = Uri.parse("asset:///chat_default_group_image.png");
-            if ((holder.tv_title.getText().toString()).contains("教学通知")) {
-                uri = Uri.parse("asset:///session_teach_notice.png");
-            } else if ((holder.tv_title.getText().toString()).contains("售后服务")) {
-                uri = Uri.parse("asset:///session_after_sale_service.png");
-            }
-            holder.group_image.setImageURI(uri);
+//            Uri uri = Uri.parse("asset:///chat_default_group_image.png");
+//            if ((holder.tv_title.getText().toString()).contains("教学通知")) {
+//                uri = Uri.parse("asset:///session_teach_notice.png");
+//            } else if ((holder.tv_title.getText().toString()).contains("售后服务")) {
+//                uri = Uri.parse("asset:///session_after_sale_service.png");
+//            }
+//            holder.group_image.setImageURI(uri);
 
 //最后一次的聊天内容，暂时取的全部聊天内容
 //            String latestMsg = String.valueOf(map.get(chanelLatestMsg));
@@ -116,6 +116,10 @@ public class ListBaseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 ////最后一次聊天的时间
 //            String latestTime = String.valueOf(map.get(chanelLatestTime));
 //            holder.tv_time.setText(!latestTime.equals("null") ? latestTime : "");
+
+            holder.tv_title.setText(map.get("title").toString());
+            holder.tv_psn_name.setText(map.get("psnname").toString());
+            holder.tv_time.setText(map.get("time").toString());
 //设置tag
             holder.itemView.setTag(map);
         }
@@ -155,7 +159,7 @@ public class ListBaseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             tv_psn_msg = (TextView) itemView.findViewById(R.id.tv_psn_msg);
             tv_psn_name = (TextView) itemView.findViewById(R.id.tv_psn_name);
             tv_time = (TextView) itemView.findViewById(R.id.tv_time);
-            group_image = (SimpleDraweeView) itemView.findViewById(R.id.group_image);
+//            group_image = (SimpleDraweeView) itemView.findViewById(R.id.group_image);
             session_layout_all = (LinearLayout) itemView.findViewById(R.id.session_layout_all);
         }
     }
