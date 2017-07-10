@@ -1,6 +1,7 @@
 package kehuhuaPage.adpter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import kehuhuaPage.activity.SumReportActivity;
 import razerdp.friendcircle.R;
 
 /**
@@ -70,10 +72,24 @@ public class StudyLogBaseAdapter extends BaseAdapter {
             viewHolder.tv_left.setVisibility(View.VISIBLE);
             viewHolder.tv_left.setText(map.get("content").toString());
             viewHolder.tv_right.setVisibility(View.INVISIBLE);
+            viewHolder.tv_left.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, SumReportActivity.class);
+                    context.startActivity(intent);
+                }
+            });
         } else {
             viewHolder.tv_right.setVisibility(View.VISIBLE);
             viewHolder.tv_right.setText(map.get("content").toString());
             viewHolder.tv_left.setVisibility(View.INVISIBLE);
+            viewHolder.tv_right.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, SumReportActivity.class);
+                    context.startActivity(intent);
+                }
+            });
         }
         viewHolder.tv_center.setText(map.get("date").toString());
         return convertView;

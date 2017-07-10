@@ -71,10 +71,21 @@ dependencies {
         compile project(':baseuilib')
         compile project(path: ':network')
     }
-
     compile project(path: ':lookbanner')
     compile project(path: ':coursecardlibrary')
-
-    compile 'com.facebook.fresco:fresco:0.14.1'
+//    compile 'com.facebook.fresco:fresco:0.14.1'
     compile 'com.jakewharton:butterknife:7.0.1'
+    compile files('libs/badgeview.jar')
+    compile files('libs/fastjson-1.2.7.jar')
+//自动更新
+//    compile 'com.zhy:okhttputils:2.6.2'
+//    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    //解决4.4下okhttp3崩溃问题
+//    compile 'com.squareup.okio:okio:1.11.0'
+    //okHttp组件
+    compile project(path: ':chatInterface')
+    //照片选择和预览3
+    compile 'com.lovedise:permissiongen:0.0.6'
+    //照片选择和预览1
+    compile 'me.iwf.photopicker:PhotoPicker:0.9.5@aar'
 }

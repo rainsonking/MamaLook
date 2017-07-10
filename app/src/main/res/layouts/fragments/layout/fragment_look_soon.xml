@@ -23,7 +23,7 @@
 
     <!--班级圈-->
     <LinearLayout
-        android:id="@+id/stu_class_circle"
+        android:id="@+id/ll_stu_class_circle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10sp"
@@ -34,7 +34,7 @@
           android:layout_height="50sp">
 
         <ImageView
-            android:id="@+id/stu_info_image"
+            android:id="@+id/stu_class_circle"
             android:layout_width="23dp"
             android:layout_height="19dp"
             android:layout_centerVertical="true"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="12sp"
-            android:layout_toRightOf="@+id/stu_info_image"
+            android:layout_toRightOf="@+id/stu_class_circle"
             android:text="班级圈"
             android:textColor="@color/black"
             android:textSize="17sp" />
@@ -70,18 +70,18 @@
 
     <!--联系老师-->
     <LinearLayout
+        android:id="@+id/ll_contact_teacher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10sp"
         android:orientation="vertical">
 
       <RelativeLayout
-          android:id="@+id/stu_resetPwd"
           android:layout_width="match_parent"
           android:layout_height="50sp">
 
         <ImageView
-            android:id="@+id/stu_passWord_image"
+            android:id="@+id/stu_contact_teacher"
             android:layout_width="23dp"
             android:layout_height="19dp"
             android:layout_centerVertical="true"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="12sp"
-            android:layout_toRightOf="@+id/stu_passWord_image"
+            android:layout_toRightOf="@+id/stu_contact_teacher"
             android:text="联系老师"
             android:textColor="@color/black"
             android:textSize="17sp" />
@@ -116,19 +116,18 @@
     </LinearLayout>
     <!--校长信箱-->
     <LinearLayout
-        android:id="@+id/ll_stu_feedback1"
+        android:id="@+id/ll_principal_mailbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10sp"
         android:orientation="vertical">
 
       <RelativeLayout
-          android:id="@+id/rl_feedback1"
           android:layout_width="match_parent"
           android:layout_height="50sp">
 
         <ImageView
-            android:id="@+id/stu_suggest_image1"
+            android:id="@+id/stu_principal_mailbox"
             android:layout_width="23dp"
             android:layout_height="19dp"
             android:layout_centerVertical="true"
@@ -139,7 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="12sp"
-            android:layout_toRightOf="@+id/stu_suggest_image1"
+            android:layout_toRightOf="@+id/stu_principal_mailbox"
             android:text="校长信箱"
             android:textColor="@color/black"
             android:textSize="17sp" />
@@ -163,19 +162,18 @@
     </LinearLayout>
     <!--活动通知-->
     <LinearLayout
-        android:id="@+id/ll_stu_feedback"
+        android:id="@+id/ll_event_notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10sp"
         android:orientation="vertical">
 
       <RelativeLayout
-          android:id="@+id/rl_feedback"
           android:layout_width="match_parent"
           android:layout_height="50sp">
 
         <ImageView
-            android:id="@+id/stu_suggest_image"
+            android:id="@+id/stu_event_notification"
             android:layout_width="23dp"
             android:layout_height="19dp"
             android:layout_centerVertical="true"
@@ -186,7 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="12sp"
-            android:layout_toRightOf="@+id/stu_suggest_image"
+            android:layout_toRightOf="@+id/stu_event_notification"
             android:text="活动通知"
             android:textColor="@color/black"
             android:textSize="17sp" />

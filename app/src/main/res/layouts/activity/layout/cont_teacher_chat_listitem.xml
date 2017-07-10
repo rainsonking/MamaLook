@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="73dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingEnd="12dp"
+    android:paddingStart="13dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/group_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        fresco:failureImage="@mipmap/ic_launcher"
+        fresco:pressedStateOverlayImage="@android:color/transparent"
+        fresco:progressBarAutoRotateInterval="5000"
+        fresco:roundAsCircle="true" />
+    <!--<ImageView-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:src="@mipmap/edus_portrait_normal" />-->
+
+    <LinearLayout
+        android:id="@+id/session_layout_all"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:text="12:25"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_time"
+                android:layout_alignBottom="@+id/tv_time"
+                android:layout_alignParentStart="true"
+                android:text="多人聊天标题"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp">
+
+            <TextView
+                android:id="@+id/tv_psn_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxEms="14"
+                android:maxLines="1"
+                android:text="最新聊天内容最新聊天内容最新聊天内容最新聊天内容"
+                android:textColor="@color/list_item_left"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_psn_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
