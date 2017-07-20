@@ -277,7 +277,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginStart="12sp"
                             android:layout_toRightOf="@+id/stu_suggest_image"
-                            android:text="修改密码"
+                            android:text="我的团队"
                             android:textColor="@color/black"
                             android:textSize="17sp" />
 

@@ -3,8 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingTop="20dp">
+    android:orientation="vertical">
+    <kehuhuaPage.widgts.CnToolbar
+        android:id="@+id/stu_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/red">
+
+    </kehuhuaPage.widgts.CnToolbar>
 
     <LinearLayout
         android:layout_width="match_parent"

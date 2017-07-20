@@ -3,7 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <kehuhuaPage.widgts.CnToolbar
+        android:id="@+id/stu_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/red">
 
+    </kehuhuaPage.widgts.CnToolbar>
     <RadioGroup
         android:id="@+id/rg_tab"
         android:layout_width="match_parent"
